@@ -305,7 +305,7 @@ where:
    {:pre [(valid-js-env? js-env (karma/custom-launchers opts))]}
    (let [doo-opts (merge default-opts opts)
          cmd (cond-> (js->command js-env compiler-opts doo-opts)
-               (not (self-hosted? js-env)) (conj (:output-to compiler-opts)))]
+               (not (self-hosted? js-env)) (conj (or (:output-to doo-opts) (:output-to compiler-opts))))]
      (when (:debug doo-opts)
        (utils/debug-log "Command to run script:" cmd))
      (try
