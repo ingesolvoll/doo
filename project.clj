@@ -1,4 +1,4 @@
-(defproject ingesolvoll/doo "0.1.13-SNAPSHOT"
+(defproject ingesolvoll/doo "0.2.0-SNAPSHOT"
   :description "doo is a library to run clj.test on different js environments."
   :url "https://github.com/bensu/doo"
   :license {:name "Eclipse Public License"
@@ -8,7 +8,10 @@
         :url "https://github.com/bensu/doo"
         :dir ".."}
 
-  :deploy-repositories [["clojars" {:creds :gpg}]]
+  :deploy-repositories [["clojars" {:sign-releases false
+                                    :url           "https://clojars.org/repo"
+                                    :username      :env/clojars_username
+                                    :password      :env/clojars_password}]]
 
   :test-paths ["test/clj"]
 
