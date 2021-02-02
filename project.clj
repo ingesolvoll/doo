@@ -1,11 +1,11 @@
-(defproject ingesolvoll/doo "0.2.0"
+(defproject ingesolvoll/doo "0.2.1"
   :description "doo is a library to run clj.test on different js environments."
   :url "https://github.com/bensu/doo"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :scm {:name "git"
-        :url "https://github.com/bensu/doo"
+        :url "https://github.com/ingesolvoll/doo"
         :dir ".."}
 
   :deploy-repositories [["clojars" {:sign-releases false
